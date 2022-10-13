@@ -1,0 +1,20 @@
+{% extends 'person/index.html' %}
+
+{% block title %} Sign Up | {% endblock %}
+
+{% block content %}
+<form action="." method="post">
+    {% csrf_token %}
+
+    <input type="text" name="username" placeholder="Enter here..."><br>
+    <input type="text" name="email" placeholder="Enter here..."><br>
+    <input type="password" name="password1" placeholder="Enter here..."><br>
+    <input type="password" name="password2" placeholder="Enter here..."><br>
+    {{ form.is_admin }} Is admin <br>
+    {{ form.is_customer }} Is customer <br>
+    {{ form.is_employee }} Is employee <br>
+    <input type="submit" value="Register">
+
+</form>
+
+{% endblock %}

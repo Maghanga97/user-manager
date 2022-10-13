@@ -1,0 +1,13 @@
+{% extends 'person/index.html' %}
+
+{% block title %} Login | {% endblock %}
+
+{% block content %}
+<form action="." method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Enter here"><br>
+    <input type="password" name="pwd" placeholder="Enter password..."><br>
+    <input type="submit" value="Login">
+</form>
+
+{% endblock %}
